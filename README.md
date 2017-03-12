@@ -1,4 +1,4 @@
-Graphql 4 GitHub
+Graphql 4 GitHub (UNDER DEVELOPMENT)
 ================
 
 An API to query your GitHub account using GraphQL.

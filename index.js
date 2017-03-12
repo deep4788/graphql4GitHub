@@ -8,8 +8,14 @@ var postData = {
         viewer {
             login
             bio
-            repository(name: "tewp") {
-                name
+            email
+            location
+            repositories(first: 5) {
+                nodes {
+                    name
+                }
+                totalCount
+                totalDiskUsage
             }
         }
     }`
@@ -29,18 +35,11 @@ var options = {
 
 request(options, function(err, res, body) {
     if(err) {
-        console.error("error posting json: ", err)
-        throw err
+        console.error("Error making POST to GitHub GraphQL: ", err);
+        throw err;
     }
-    var headers = res.headers
-    var statusCode = res.statusCode
-    console.log("statusCode: ", statusCode)
-    console.log("body: ", body)
+    var headers = res.headers;
+    var statusCode = res.statusCode;
+    console.log("statusCode: ", statusCode);
+    console.log("body: ", JSON.stringify(body, null, 2));
 })
-
-//XXX
-//curl -H "Authorization: bearer token" -X POST -d ' { "query": "query { viewer { login }}" } ' https://api.github.com/graphql
-//var postData = {
-//    "query": "query { viewer { login bio }}"
-//};
-
