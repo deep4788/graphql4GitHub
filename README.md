@@ -5,12 +5,15 @@ An API to query your GitHub account using GraphQL.
 
 Description
 -----------
+TODO
 
 Installation
 ------------
+TODO
+
 - Install Node.js and npm
 - `npm install`
-- `node index.js`
+- `node index.js` || `./index.js`
 
 Author
 ------

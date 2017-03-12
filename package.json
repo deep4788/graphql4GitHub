@@ -1,0 +1,14 @@
+{
+  "name": "graphql4github",
+  "version": "1.0.0",
+  "description": "An API to GitHub account using GraphQL.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Deep Aggarwal <deep.uiuc@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "request": "2.81.0"
+  }
+}
