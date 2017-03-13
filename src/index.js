@@ -10,9 +10,18 @@ var postData = {
             bio
             email
             location
-            repositories(first: 5) {
-                nodes {
-                    name
+            repositories(first: 10, orderBy: {field: PUSHED_AT, direction: DESC}) {
+                edges {
+                    node {
+                        name
+                        createdAt
+                        url
+                    }
+                    cursor
+                }
+                pageInfo {
+                    endCursor
+                    hasNextPage
                 }
                 totalCount
                 totalDiskUsage

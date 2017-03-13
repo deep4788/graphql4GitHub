@@ -1,7 +1,7 @@
 Graphql 4 GitHub (UNDER DEVELOPMENT)
 ================
 
-An API to query your GitHub account using GraphQL.
+`kwiregh`: An API to query (*kwirē*) your GitHub account using GraphQL.
 
 Description
 -----------
@@ -12,11 +12,22 @@ Installation
 TODO
 
 - Install Node.js and npm
-- `npm install`
-- `node index.js` || `./index.js`
+- `cd graphql4GitHub`
+- `npm install -g`
+
+Usage
+-----
+
+```sh
+TODO
+
+# Example usage:
+$ TODO
+```
 
 Author
 ------
 Deep Aggarwal  
 deep.uiuc@gmail.com  
 Date Started: 03/11/2017  
+kk

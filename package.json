@@ -2,13 +2,37 @@
   "name": "graphql4github",
   "version": "1.0.0",
   "description": "An API to GitHub account using GraphQL.",
-  "main": "index.js",
+  "author": "Deep Aggarwal <deep.uiuc@gmail.com>",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Deep Aggarwal <deep.uiuc@gmail.com>",
+  "bin": {
+    "kwiregh": "./src/index.js"
+  },
+  "engines": {
+    "node": "7.4.0",
+    "npm": "4.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deep4788/graphql4GitHub"
+  },
   "license": "ISC",
+  "keywords": [
+    "node.js",
+    "query",
+    "graphql",
+    "github",
+    "command-line",
+    "tool",
+    "utility",
+    "request"
+  ],
   "dependencies": {
     "request": "2.81.0"
+  },
+  "devDependencies": {
+    "supertest": "3.0.0"
   }
 }
