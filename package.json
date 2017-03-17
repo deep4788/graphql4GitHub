@@ -30,6 +30,7 @@
     "request"
   ],
   "dependencies": {
+    "jsonfile": "2.4.0",
     "request": "2.81.0"
   },
   "devDependencies": {
