@@ -1,11 +1,13 @@
 Graphql 4 GitHub (UNDER DEVELOPMENT)
 ================
 
-`kwiregh`: An API to query (*kwirē*) your GitHub account using GraphQL.
+`kwiregh`: An API to query your GitHub account using GraphQL.
+
+Query (*kwirē*) + GitHub (gh) => **kwiregh**
 
 Description
 -----------
-TODO
+A project to get some feel for GraphQL and how GitHub exposes its data access API.
 
 Installation
 ------------

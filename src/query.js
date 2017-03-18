@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 "use strict";
 
+let queryData = require("./querydata");
+
 /**
 * @brief This class handles query object
 */
@@ -9,32 +11,22 @@ class Query {
         this._queryData = {};
     }
 
-    createQuery() {
-        this._queryData = {
-            "query": `query {
-                viewer {
-                    login
-                    bio
-                    email
-                    location
-                    repositories(first: 10, orderBy: {field: PUSHED_AT, direction: DESC}) {
-                        edges {
-                            node {
-                                name
-                                createdAt
-                                url
-                            }
-                            cursor
-                        }
-                        pageInfo {
-                            hasNextPage
-                        }
-                        totalCount
-                        totalDiskUsage
-                    }
-                }
-            }`
-        };
+    createQuery(queryField) {
+        if(queryField === "b") {
+            this._queryData = { "query": queryData.BIO };
+        }
+        else if(queryField === "e") {
+            this._queryData = { "query": queryData.EMAIL };
+        }
+        else if(queryField === "l") {
+            this._queryData = { "query": queryData.LOGIN };
+        }
+        else if(queryField === "r") {
+            this._queryData = { "query": queryData.REPOS };
+        }
+        else {
+            this._queryData = { "query": queryData.LOGIN };
+        }
     }
 
     getQuery() {

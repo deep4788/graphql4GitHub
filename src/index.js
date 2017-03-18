@@ -11,14 +11,9 @@ const query = require("./query");
 //Get the settings for the application
 let settingsFile = __dirname + "/settings.json";
 let settings = jsonfile.readFileSync(settingsFile);
-console.dir(settings["OAUTH_TOKEN"]);
-console.dir(settings["API_URL"]);
 
 let queryObj = new query.Query();
 queryObj.createQuery();
-console.dir(queryObj.getQuery());
-
-let cursorID = "xx";
 
 let OAUTH_TOKEN = settings["OAUTH_TOKEN"];
 let url = settings["API_URL"] + "/graphql?access_token=" + OAUTH_TOKEN;
@@ -40,20 +35,8 @@ request(options, function(err, res, body) {
 
     //Get the response body
     let resBody = JSON.stringify(body, null, 2);
-    //XXX "cursor": "Y3Vyc29yOjIwMTUtMTItMDhUMDA6NTQ6MjYtMDY6MDA="
-    //let cursorPatt = /"cursor": "\w+(.)"/g;
-    //console.log("regCursor: ", cursorPatt.test(resBody));
-    //console.log("regCursor: ", resBody.match(cursorPatt));
-    //let aaa = resBody.match(cursorPatt);
-
-    //aaa.forEach(function(value, index) {
-    //    console.log("value: " + value);
-    //    console.log("value.substr(): " + value.substr(10));
-    //});
+    console.log("Requested Data: ", resBody);
+});
 
 
 
-
-    console.log("resBody[0]: ", resBody[0]);
-    console.log("resBody: ", resBody);
-})
