@@ -1,26 +1,52 @@
 "use strict";
 
-var BIO = `query {
+let BIO = `query {
     viewer {
         login
         bio
     }
 }`;
 
-var EMAIL = `query {
+let EMAIL = `query {
     viewer {
         login
         email
     }
 }`;
 
-var LOGIN = `query {
+let FOLLOWERS = `query {
+    viewer {
+        login
+        followers(first: 10) {
+            edges {
+                node {
+                    name
+                }
+            }
+        }
+    }
+}`;
+
+let LOGIN = `query {
     viewer {
         login
     }
 }`;
 
-var REPOS = `query {
+let ORGS = `query {
+    viewer {
+        login
+        organizations(first: 10) {
+            edges {
+                node {
+                    name
+                }
+            }
+        }
+    }
+}`;
+
+let REPOS = `query {
     viewer {
         login
         repositories(first: 40, orderBy: {field: PUSHED_AT, direction: DESC}) {
@@ -30,7 +56,6 @@ var REPOS = `query {
                     createdAt
                     url
                 }
-                cursor
             }
             totalCount
             totalDiskUsage
@@ -41,6 +66,8 @@ var REPOS = `query {
 module.exports = {
     BIO,
     EMAIL,
+    FOLLOWERS,
     LOGIN,
+    ORGS,
     REPOS
 };

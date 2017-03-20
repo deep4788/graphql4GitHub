@@ -31,7 +31,8 @@
   ],
   "dependencies": {
     "jsonfile": "2.4.0",
-    "request": "2.81.0"
+    "request": "2.81.0",
+    "yargs": "7.0.2"
   },
   "devDependencies": {
     "supertest": "3.0.0"
