@@ -16,6 +16,7 @@ A project to get some feel for GraphQL and how GitHub exposes its data access AP
 
 Installation
 ------------
+- Add your OAUTH token in *src/settings.json*
 - Install Node.js and npm
 - `cd graphql4GitHub`
 - `npm install -g`
